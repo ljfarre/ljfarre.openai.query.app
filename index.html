@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Interactive Davinci Text Model Query</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>Interactive Davinci Text Model Query</h1>
+    <form>
+      <label for="prompt">Enter a text prompt:</label>
+      <input type="text" id="prompt" name="prompt">
+      <br>
+      <label for="model">Select a model:</label>
+      <select id="model" name="model">
+        <option value="davinci">Davinci</option>
+        <option value="curie">Curie</option>
+        <option value="babbage">Babbage</option>
+        <option value="ada">Ada</option>
+      </select>
+      <br>
+      <label for="temperature">Select a temperature:</label>
+      <input type="range" min="0" max="1" step="0.01" value="0.5" id="temperature" name="temperature">
+      <br>
+      <label for="max-length">Select a maximum length:</label>
+      <input type="number" id="max-length" name="max-length" value="50">
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/submit.js"></script>
+  </body>
+</html>
